@@ -1,0 +1,322 @@
+/* General Body and Layout Styles */
+body {
+  background-color: #f0f4f8; /* Light pastel blue background */
+  color: #333; /* Darker text for better readability */
+  font-size: large;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Social Insight Pro Title */
+.app-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #3b5998;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 80px;
+  margin-right: 20px;
+}
+
+.metrics {
+  display: flex;
+}
+
+.metric-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Metric Text */
+.metric-card h3 {
+  color: #3b5998;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.metric-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Hover Effect for Cards */
+.metric-card:hover {
+  box-shadow: 0px 6px 18px rgba(59, 89, 152, 0.3);
+  transform: translateY(-5px);
+}
+
+.styled-text {
+  color: #3b5998;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block; /* Ensures margin-bottom works properly */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .metric-card {
+      margin-left: 0;
+      margin-bottom: 20px;
+  }
+}
+
+.container {
+  margin-top: 30px;
+}
+
+/* Heading Styles */
+h1 {
+  color: #3b5998; /* Facebook-like blue for headings */
+  font-size: 36px; /* Increased font size for site name */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 1.8rem;
+  color: #3b5998; /* Facebook-like blue for headings */
+}
+
+h5 {
+  color: #6c757d; /* Muted dark grey for subheadings */
+}
+
+/* Engagement Section Styles */
+.engagement-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Engagement Card Styles */
+.engagement-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allow engagement cards to grow equally */
+  margin: 0 10px; /* Space between cards */
+}
+
+/* Comments List */
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comments-list li {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+}
+
+/* Profile Picture Styles */
+#profilePicture {
+  width: 80%; /* Responsive size */
+  max-width: 200px; /* Maximum size */
+  border: 3px solid #3b5998; /* Blue border for emphasis */
+}
+
+/* Card Styles for Interests and About */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Placeholder styles for social media cards */
+#socials-container {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+}
+
+/* Adjusting the layout of top friends and likes */
+#friendsContent,
+#mostLikedPost,
+#leastLikedPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items */
+}
+
+#mostLikedPost img,
+#leastLikedPost img {
+  width: 100%; /* Responsive image */
+  max-width: 500px; /* Maximum width */
+}
+/* About Section Styles */
+#aboutContent {
+  font-family: Arial, sans-serif; /* Font for the About section */
+}
+
+.about-item {
+  position: relative; /* Needed for positioning the popup */
+  margin: 10px 0; /* Spacing between items */
+}
+
+.about-heading {
+  cursor: pointer; /* Indicate that the heading is interactive */
+}
+
+/* Popup Box Styles */
+.popuptext {
+  visibility: hidden; /* Hide popup by default */
+  width: 220px; /* Set width of the popup */
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+  border-radius: 6px; /* Rounded corners */
+  padding: 8px; /* Padding inside popup */
+  position: absolute; /* Positioning the popup */
+  z-index: 1; /* Ensure it's above other content */
+  bottom: 125%; /* Position above the heading */
+  left: 50%; /* Center horizontally */
+  margin-left: -110px; /* Offset for centering */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+/* Show the popup when hovering over the heading */
+.about-heading:hover + .popup .popuptext {
+  visibility: visible; /* Make visible */
+  opacity: 1; /* Fully opaque */
+}
+
+/* Show the popup when hovering over the parent container */
+.about-item:hover .popuptext {
+  visibility: visible; /* Make visible */
+  opacity: 1; /* Fully opaque */
+}
+
+.card {
+  width: 100%; /* Ensures cards take full width */
+}
+
+.engagement-section {
+  margin-bottom: 20px;
+}
+
+.engagement-card {
+  margin-bottom: 20px; /* Adds spacing between engagement cards */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9ebee;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+#postsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Post card styling */
+.post-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Post header section */
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-user-info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #3b5998;
+}
+
+.post-user-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Post content section */
+.post-content {
+  margin-bottom: 10px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.post-caption {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Reactions section */
+.post-reactions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.post-reactions span {
+  margin-right: 10px;
+}
+
+

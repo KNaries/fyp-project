@@ -1,0 +1,124 @@
+body {
+  background-color: #f0f4f8; /* Light pastel blue background */
+  color: #444; /* Slightly darker text for contrast */
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.main-container {
+  text-align: center;
+  background-color: #ffffff; /* White container for clarity */
+  border-radius: 12px;
+  padding: 50px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  width: 100%;
+  max-width: 450px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  border: 2px solid #3b5998; /* Facebook-like blue border */
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #3b5998; /* Facebook-inspired darker blue for the heading */
+}
+
+.search-box {
+  display: block;
+}
+
+.search-box input {
+  width: 100%;
+  height: 45px;
+  border: 2px solid #b0c4de; /* Lighter blue border for input */
+  border-radius: 8px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333; /* Darker text */
+  background-color: #e9eff5; /* Soft blue background inside input */
+}
+
+.search-box input:focus {
+  border-color: #3b5998; /* Facebook-inspired blue on focus */
+  outline: none;
+}
+
+.search-box button {
+  width: 100%;
+  height: 45px;
+  background-color: #3b5998; /* Facebook-inspired button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #29487d; /* Darker blue on hover */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+#profile-picture-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+
+}
+
+#profile-picture {
+  width: 100%;
+  height: auto;
+}
+
+#profile-picture.show {
+  display: block;
+  animation: bounceIn 0.5s ease-out;
+}
+
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  80% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

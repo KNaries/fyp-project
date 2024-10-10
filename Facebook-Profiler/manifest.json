@@ -1,0 +1,55 @@
+{
+    "name": "ProfilerPro2",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "FB ",
+    "minimum_chrome_version": "88",
+    "icons": {
+       "16": "icons/logoblue.png",
+       "48": "icons/logoblue.png",
+       "128": "icons/logoblue.png"
+    },
+    "background": {
+       "service_worker": "/js/background/background.js",
+       "type": "module"
+    },
+    "action": {
+       "default_icon": "icons/logoblue.png",
+       "default_title": "ProfilerPro"
+    },
+    "permissions": [
+       "tabs",
+       "storage",
+       "activeTab",
+       "webRequest",
+       "contextMenus",
+       "notifications",
+       "declarativeNetRequest",
+       "declarativeNetRequestWithHostAccess"
+    ],
+    "host_permissions": [
+       "*://*.facebook.com/*"
+    ],
+    "content_security_policy": {
+       "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "web_accessible_resources": [
+       {
+          "resources": [
+             "data/followers6117.json",
+             "data/following6117.json",
+             "about6117.json",
+             "posts6117.json",
+             "postsBilal.json",
+             "postsIhsas.json",
+             "friends6117.json",
+             "postData.json",
+             "getProfile.js",
+             "frame.js"
+          ],
+          "matches": [
+             "<all_urls>"
+          ]
+       }
+    ]
+ }

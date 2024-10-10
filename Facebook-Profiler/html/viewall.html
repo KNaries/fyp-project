@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Insight Pro</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../include/css/viewall.css">
+    <script src="../include/loginCheck.js" defer></script> 
+    <script src="../js/frame.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Social Insight Pro Title -->
+        <div class="app-title">
+            Social Insight Pro
+        </div>
+
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <!-- Profile Section -->
+            <div id="firstPostCard" class="profile-section">
+                <img src="https://via.placeholder.com/80" alt="Profile Picture" class="profile-img">
+                <div>
+                    <h1 id="firstPostUsername">Username</h1>
+                    <p id="firstPostEmail">Email</p>
+                </div>
+            </div>
+
+            <!-- Metrics -->
+            <div class="metrics">
+                <div class="metric-card" id="followersContent">
+                    <h3>Total Followers</h3>
+                    <p id="followersCount">0</p>
+                </div>
+                <div class="metric-card" id="followingContent">
+                    <h3>Total Following</h3>
+                    <p id="followingCount">0</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Subscriptions</h3>
+                    <p>145</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Verified</h3>
+                    <p>66%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Engagement Section -->
+        <div class="engagement-section">
+            <!-- Comments Section -->
+            <div class="engagement-card">
+                <h2>Comments</h2>
+                <ul class="comments-list" id="commentsList">
+                    <!-- Comments will be populated here dynamically -->
+                </ul>
+            </div>
+
+            <!-- View Post Insights Button -->
+            <div class="text-center mt-4">
+                <button id="viewPostInsightsBtn" class="btn btn-primary">View Post Insights</button>
+            </div>
+        </div>
+
+        <!-- Dynamic User Info -->
+        <div class="row mt-3">
+            <div class="col-md-8">
+                <div class="card mb-3 p-3" id="overviewContent">
+                    <h4>Overview</h4>
+                    <p id="userOverview">User overview details will be displayed here.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-3 p-3" id="friendsContent">
+                            <h4>Top Friends</h4>
+                            <div id="friends-container">
+                                <!-- Container for Top Friends -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 text-center">
+                        <img src="pic.jpeg" id="profilePicture" class="img-fluid rounded-circle" alt="User Picture">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3 p-3" id="interestsContent">
+                    <h4>Interests</h4>
+                    <p id="userInterests">User interests and hobbies will go here.</p>
+                </div>
+
+                <div class="card mb-3 p-3" id="aboutContent">
+                    <h4>About</h4>
+                    <p id="get_user_about">Details about the user will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section to display least and most liked photos -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-info text-white">
+                        Most Liked Photo
+                    </div>
+                    <div class="card-body text-center" id="mostLikedPost">
+                        <img src="most_liked_placeholder.jpg" alt="Most Liked Photo" class="img-fluid">
+                        <p id="mostLikedDescription">Description of the most liked post</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-warning text-white">
+                        Least Liked Photo
+                    </div>
+                    <div class="card-body text-center" id="leastLikedPost">
+                        <img src="least_liked_placeholder.jpg" alt="Least Liked Photo" class="img-fluid">
+                        <p id="leastLikedDescription">Description of the least liked post</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <!-- New Section for Social Media Info -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-3 p-3" id="socialsCard">
+                        <h4>Top Associated Social Media Accounts</h4>
+                        <div id="socials-container">
+                            <p>Top associated social media accounts will be displayed here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Facebook Posts & Sentiment Analysis</h1>
+            <div id="posts-container"></div>
+            <h3>Top Engagements are: </h3>
+            <div id="engagements-container"></div>
+        </div>
+    </div>
+
+</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
